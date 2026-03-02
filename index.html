@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Antonio Marcos – Arquiteto de Soluções e Desenvolvedor especializado em WhatsApp Business API. Automação, chatbots e integração oficial WABA para empresas." />
-  <title>Antonio Marcos – Arquiteto de Soluções e Desenvolvedor</title>
+  <meta name="description"
+    content="Trajeto Web especializado em WhatsApp Business API. Automação, chatbots e integração oficial WABA para empresas." />
+  <title>Trajeto Web</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
-      --bg:        #0d1117;
-      --bg2:       #161b22;
-      --bg3:       #1c2333;
-      --border:    #30363d;
-      --green:     #25d366;
-      --green-dim: rgba(37,211,102,0.12);
-      --text:      #e6edf3;
-      --muted:     #8b949e;
-      --muted2:    #6e7681;
-      --red:       #f85149;
-      --amber:     #f0883e;
+      --bg: #0d1117;
+      --bg2: #161b22;
+      --bg3: #1c2333;
+      --border: #30363d;
+      --green: #25d366;
+      --green-dim: rgba(37, 211, 102, 0.12);
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --muted2: #6e7681;
+      --red: #f85149;
+      --amber: #f0883e;
       --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--font);
@@ -33,777 +43,1389 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     /* ══ LAYOUT ══ */
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
     /* ══ HEADER ══ */
     header {
-      position: sticky; top: 0; z-index: 200;
-      background: rgba(13,17,23,.9);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(13, 17, 23, .9);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
 
     .header-wrap {
-      max-width: 1080px; margin: 0 auto; padding: 0 24px;
-      height: 62px; display: flex; align-items: center; justify-content: space-between;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .logo-mark { display: flex; align-items: center; gap: 11px; }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
 
     .logo-avatar {
-      width: 34px; height: 34px; border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
       background: linear-gradient(135deg, var(--green) 0%, #0d7a3a 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .8rem; font-weight: 800; color: #0d1117; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 800;
+      color: #0d1117;
+      flex-shrink: 0;
       /* SUBSTITUA POR: background-image: url('foto.jpg'); background-size: cover; */
     }
 
-    .logo-text { font-size: .9rem; font-weight: 700; line-height: 1.2; }
-    .logo-text span { display: block; font-size: .7rem; font-weight: 400; color: var(--muted); }
+    .logo-text {
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
 
-    nav { display: flex; gap: 26px; }
-    nav a { color: var(--muted); font-size: .83rem; font-weight: 500; transition: color .2s; }
-    nav a:hover { color: var(--text); }
+    .logo-text span {
+      display: block;
+      font-size: .7rem;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 26px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: .83rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
 
     /* ══ HERO ══ */
     .hero {
       padding: 96px 24px 80px;
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
 
     .hero-bg-grid {
-      position: absolute; inset: 0; pointer-events: none;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
       background-image:
-        linear-gradient(rgba(37,211,102,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(37,211,102,.035) 1px, transparent 1px);
+        linear-gradient(rgba(37, 211, 102, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 211, 102, .035) 1px, transparent 1px);
       background-size: 52px 52px;
     }
 
     .hero-bg-glow {
-      position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
-      width: 860px; height: 520px; pointer-events: none;
-      background: radial-gradient(ellipse, rgba(37,211,102,.09) 0%, transparent 65%);
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 860px;
+      height: 520px;
+      pointer-events: none;
+      background: radial-gradient(ellipse, rgba(37, 211, 102, .09) 0%, transparent 65%);
     }
 
     .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 1080px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center;
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 64px;
+      align-items: center;
     }
 
     @media (max-width: 760px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero-photo-col { order: -1; display: flex; justify-content: center; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-photo-col {
+        order: -1;
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .hero-kicker {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--green-dim); border: 1px solid rgba(37,211,102,.22);
-      color: var(--green); font-size: .71rem; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-dim);
+      border: 1px solid rgba(37, 211, 102, .22);
+      color: var(--green);
+      font-size: .71rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
     }
 
     .kicker-dot {
-      width: 7px; height: 7px; background: var(--green); border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-radius: 50%;
       animation: glow 2.2s ease-in-out infinite;
     }
 
     @keyframes glow {
-      0%,100% { box-shadow: 0 0 5px var(--green); }
-      50%      { box-shadow: 0 0 14px var(--green); opacity:.5; }
+
+      0%,
+      100% {
+        box-shadow: 0 0 5px var(--green);
+      }
+
+      50% {
+        box-shadow: 0 0 14px var(--green);
+        opacity: .5;
+      }
     }
 
     .hero h1 {
       font-size: clamp(2rem, 4.8vw, 3.2rem);
-      font-weight: 800; line-height: 1.18; letter-spacing: -.03em; margin-bottom: 20px;
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -.03em;
+      margin-bottom: 20px;
     }
 
     .hero h1 .hl {
       background: linear-gradient(120deg, var(--green), #7ee8a2);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-lead {
-      font-size: 1.05rem; color: var(--muted); line-height: 1.75;
-      max-width: 560px; margin-bottom: 36px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 560px;
+      margin-bottom: 36px;
     }
 
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
     .btn-main {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--green); color: #0d1117;
-      font-weight: 800; font-size: .9rem; padding: 13px 26px;
-      border-radius: 8px; transition: background .2s, transform .15s, box-shadow .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: #0d1117;
+      font-weight: 800;
+      font-size: .9rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      transition: background .2s, transform .15s, box-shadow .2s;
     }
 
-    .btn-main:hover { background: #2ee875; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.28); }
+    .btn-main:hover {
+      background: #2ee875;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, .28);
+    }
 
     .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: var(--text); font-weight: 600; font-size: .9rem;
-      padding: 13px 26px; border-radius: 8px; border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      font-size: .9rem;
+      padding: 13px 26px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
       transition: border-color .2s, background .2s;
     }
 
-    .btn-ghost:hover { border-color: var(--muted2); background: var(--bg2); }
+    .btn-ghost:hover {
+      border-color: var(--muted2);
+      background: var(--bg2);
+    }
 
     /* Photo block */
     .hero-photo {
-      width: 220px; height: 260px; border-radius: 16px;
-      background: var(--bg2); border: 1px solid var(--border);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 12px; position: relative; overflow: hidden;
+      width: 220px;
+      height: 260px;
+      border-radius: 16px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
       /* SUBSTITUA O BLOCO ABAIXO POR: background-image: url('foto.jpg'); background-size: cover; background-position: center; */
     }
 
     .hero-photo::before {
       content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(37,211,102,.06) 0%, transparent 60%);
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(37, 211, 102, .06) 0%, transparent 60%);
     }
 
-    .photo-icon { opacity: .25; }
-    .photo-icon svg { width: 48px; height: 48px; stroke: var(--text); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .photo-icon {
+      opacity: .25;
+    }
+
+    .photo-icon svg {
+      width: 48px;
+      height: 48px;
+      stroke: var(--text);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
     .photo-label {
-      font-size: .7rem; color: var(--muted2); letter-spacing: .06em;
-      text-transform: uppercase; text-align: center; padding: 0 16px; line-height: 1.5;
+      font-size: .7rem;
+      color: var(--muted2);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 16px;
+      line-height: 1.5;
     }
 
     .hero-photo-badge {
-      position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
-      background: rgba(13,17,23,.88); border: 1px solid var(--border);
-      border-radius: 100px; padding: 5px 12px; white-space: nowrap;
-      font-size: .7rem; font-weight: 600; color: var(--green);
-      display: flex; align-items: center; gap: 6px;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(13, 17, 23, .88);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 12px;
+      white-space: nowrap;
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .hero-photo-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
+    .hero-photo-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+    }
 
     /* ══ EDUCATION STRIP ══ */
     .edu-strip {
-      background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
       padding: 56px 24px;
     }
 
     .edu-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: start;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 56px;
+      align-items: start;
     }
 
-    @media (max-width: 720px) { .edu-inner { grid-template-columns: 1fr; gap: 32px; } }
+    @media (max-width: 720px) {
+      .edu-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
 
-    .edu-label { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+    .edu-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
 
     .edu-title {
       font-size: clamp(1.3rem, 2.8vw, 1.85rem);
-      font-weight: 800; line-height: 1.25; letter-spacing: -.02em;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -.02em;
     }
 
-    .edu-cards { display: flex; flex-direction: column; gap: 14px; }
+    .edu-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
 
     .edu-card {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 10px; padding: 18px 20px;
-      display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      align-items: start;
     }
 
     .edu-num {
-      font-family: 'Courier New', monospace; font-size: .7rem; font-weight: 800;
-      color: var(--amber); opacity: .7; padding-top: 2px;
+      font-family: 'Courier New', monospace;
+      font-size: .7rem;
+      font-weight: 800;
+      color: var(--amber);
+      opacity: .7;
+      padding-top: 2px;
     }
 
-    .edu-card h4 { font-size: .9rem; font-weight: 700; margin-bottom: 4px; }
-    .edu-card p  { font-size: .83rem; color: var(--muted); line-height: 1.6; }
+    .edu-card h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .edu-card p {
+      font-size: .83rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
 
     /* ══ SERVICES ══ */
-    #servicos { padding: 88px 24px; }
+    #servicos {
+      padding: 88px 24px;
+    }
 
-    .s-head { margin-bottom: 52px; }
-    .s-label { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
-    .s-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.02em; margin-bottom: 10px; }
-    .s-head p { color: var(--muted); font-size: .95rem; max-width: 520px; line-height: 1.7; }
+    .s-head {
+      margin-bottom: 52px;
+    }
+
+    .s-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .s-head h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
+    }
+
+    .s-head p {
+      color: var(--muted);
+      font-size: .95rem;
+      max-width: 520px;
+      line-height: 1.7;
+    }
 
     .svc-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
     }
 
     .svc {
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 12px; padding: 28px; position: relative; overflow: hidden;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
       transition: border-color .25s, transform .2s, box-shadow .2s;
     }
 
     .svc::after {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, transparent, var(--green), transparent);
-      opacity: 0; transition: opacity .3s;
+      opacity: 0;
+      transition: opacity .3s;
     }
 
-    .svc:hover { border-color: rgba(37,211,102,.3); transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,.45); }
-    .svc:hover::after { opacity: 1; }
+    .svc:hover {
+      border-color: rgba(37, 211, 102, .3);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .45);
+    }
 
-    .svc-n { font-family: 'Courier New', monospace; font-size: .66rem; font-weight: 800; color: var(--green); opacity: .5; letter-spacing: .1em; margin-bottom: 14px; }
+    .svc:hover::after {
+      opacity: 1;
+    }
+
+    .svc-n {
+      font-family: 'Courier New', monospace;
+      font-size: .66rem;
+      font-weight: 800;
+      color: var(--green);
+      opacity: .5;
+      letter-spacing: .1em;
+      margin-bottom: 14px;
+    }
 
     .svc-ico {
-      width: 40px; height: 40px; border-radius: 9px;
-      background: var(--green-dim); border: 1px solid rgba(37,211,102,.18);
-      display: flex; align-items: center; justify-content: center; margin-bottom: 15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
+      background: var(--green-dim);
+      border: 1px solid rgba(37, 211, 102, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
     }
 
-    .svc-ico svg { width: 19px; height: 19px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .svc-ico svg {
+      width: 19px;
+      height: 19px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-    .svc h3 { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
-    .svc p  { font-size: .845rem; color: var(--muted); line-height: 1.7; }
+    .svc h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .svc p {
+      font-size: .845rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
 
     /* ══ HOW ══ */
     #processo {
       padding: 88px 24px;
-      background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .steps-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 16px;
     }
 
-    .step-item { padding: 32px 26px; position: relative; }
-    .step-item + .step-item { border-left: 1px solid var(--border); }
+    .step-item {
+      padding: 32px 26px;
+      position: relative;
+    }
+
+    .step-item+.step-item {
+      border-left: 1px solid var(--border);
+    }
 
     @media (max-width: 600px) {
-      .step-item + .step-item { border-left: none; border-top: 1px solid var(--border); }
+      .step-item+.step-item {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
     }
 
-    .step-n { font-family: 'Courier New', monospace; font-size: .66rem; font-weight: 800; color: var(--green); opacity: .6; letter-spacing: .1em; margin-bottom: 14px; }
-    .step-item h3 { font-size: .93rem; font-weight: 700; margin-bottom: 8px; }
-    .step-item p  { font-size: .835rem; color: var(--muted); line-height: 1.65; }
+    .step-n {
+      font-family: 'Courier New', monospace;
+      font-size: .66rem;
+      font-weight: 800;
+      color: var(--green);
+      opacity: .6;
+      letter-spacing: .1em;
+      margin-bottom: 14px;
+    }
+
+    .step-item h3 {
+      font-size: .93rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step-item p {
+      font-size: .835rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
 
     /* ══ ABOUT ══ */
-    #sobre { padding: 88px 24px; }
-
-    .about-grid {
-      display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: start;
+    #sobre {
+      padding: 88px 24px;
     }
 
-    @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+    .about-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (max-width: 720px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
 
     /* Photo large */
     .about-photo {
-      width: 260px; border-radius: 16px; overflow: hidden;
-      border: 1px solid var(--border); flex-shrink: 0;
+      width: 260px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
     }
 
     .about-photo-inner {
-      width: 260px; height: 320px;
+      width: 260px;
+      height: 320px;
       background: var(--bg2);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 10px;
       /* SUBSTITUA POR: background-image: url('foto.jpg'); background-size: cover; background-position: top center; */
     }
 
-    .about-photo-inner svg { width: 52px; height: 52px; stroke: var(--muted2); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; opacity: .4; }
+    .about-photo-inner svg {
+      width: 52px;
+      height: 52px;
+      stroke: var(--muted2);
+      fill: none;
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: .4;
+    }
 
     .about-photo-info {
-      background: var(--bg3); border-top: 1px solid var(--border);
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
       padding: 16px 18px;
     }
 
-    .about-photo-name { font-size: .9rem; font-weight: 700; margin-bottom: 2px; }
-    .about-photo-role { font-size: .75rem; color: var(--green); font-weight: 600; }
-    .about-photo-city { font-size: .72rem; color: var(--muted); margin-top: 2px; }
-
-    .about-content h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.02em; margin-bottom: 18px; }
-    .about-content p  { color: var(--muted); font-size: .92rem; line-height: 1.78; margin-bottom: 14px; }
-
-    .skills-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 22px; }
-
-    .skill-tag {
-      background: var(--bg2); border: 1px solid var(--border); border-radius: 6px;
-      padding: 9px 13px; font-size: .77rem; font-weight: 600; color: var(--muted);
-      display: flex; align-items: center; gap: 7px;
+    .about-photo-name {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 2px;
     }
 
-    .skill-tag::before { content: ''; width: 5px; height: 5px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+    .about-photo-role {
+      font-size: .75rem;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .about-photo-city {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .about-content h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.78;
+      margin-bottom: 14px;
+    }
+
+    .skills-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .skill-tag {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 9px 13px;
+      font-size: .77rem;
+      font-weight: 600;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .skill-tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
     /* ══ CONTACT ══ */
     #contato {
       padding: 88px 24px;
-      background: var(--bg2); border-top: 1px solid var(--border);
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
     }
 
     .contact-layout {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
     }
 
-    @media (max-width: 720px) { .contact-layout { grid-template-columns: 1fr; gap: 36px; } }
+    @media (max-width: 720px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
 
-    .contact-left h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.02em; margin-bottom: 14px; }
-    .contact-left > p { color: var(--muted); font-size: .93rem; line-height: 1.75; margin-bottom: 28px; }
+    .contact-left h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: 14px;
+    }
+
+    .contact-left>p {
+      color: var(--muted);
+      font-size: .93rem;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
 
     .contact-promise {
-      display: flex; flex-direction: column; gap: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
     }
 
     .promise-item {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: .85rem; color: var(--muted); line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.5;
     }
 
-    .promise-check { color: var(--green); font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+    .promise-check {
+      color: var(--green);
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
 
-    .contact-right { display: flex; flex-direction: column; gap: 13px; }
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
 
     .ch {
-      display: flex; align-items: center; gap: 14px;
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 10px; padding: 17px 19px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 17px 19px;
       transition: border-color .2s, transform .15s;
     }
 
-    .ch:hover { border-color: var(--green); transform: translateY(-1px); }
-
-    .ch-ico {
-      width: 40px; height: 40px; border-radius: 8px;
-      background: var(--green-dim); border: 1px solid rgba(37,211,102,.18);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    .ch:hover {
+      border-color: var(--green);
+      transform: translateY(-1px);
     }
 
-    .ch-ico svg { width: 19px; height: 19px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .ch-ico {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--green-dim);
+      border: 1px solid rgba(37, 211, 102, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-    .ch-info { flex: 1; }
-    .ch-lbl { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted2); margin-bottom: 2px; }
-    .ch-val { font-size: .92rem; font-weight: 600; }
+    .ch-ico svg {
+      width: 19px;
+      height: 19px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-    .ch-arr { color: var(--muted2); font-size: 1rem; }
+    .ch-info {
+      flex: 1;
+    }
+
+    .ch-lbl {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      margin-bottom: 2px;
+    }
+
+    .ch-val {
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .ch-arr {
+      color: var(--muted2);
+      font-size: 1rem;
+    }
 
     .contact-note {
-      margin-top: 4px; font-size: .78rem; color: var(--muted); line-height: 1.65;
-      padding: 14px 16px; background: var(--bg); border: 1px solid var(--border);
+      margin-top: 4px;
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.65;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
       border-radius: 8px;
     }
 
     /* ══ PRIVACY ══ */
-    #privacidade { padding: 72px 24px; border-top: 1px solid var(--border); }
+    #privacidade {
+      padding: 72px 24px;
+      border-top: 1px solid var(--border);
+    }
 
     .priv {
-      max-width: 840px; margin: 0 auto;
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 12px; padding: 40px;
-      font-size: .84rem; color: var(--muted); line-height: 1.8;
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      font-size: .84rem;
+      color: var(--muted);
+      line-height: 1.8;
     }
 
     .priv h2 {
-      font-size: 1rem; font-weight: 700; color: var(--text);
-      margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
-    }
-
-    .priv h3 { font-size: .86rem; font-weight: 700; color: var(--text); margin: 20px 0 6px; }
-    .priv a  { color: var(--green); }
-    .priv a:hover { text-decoration: underline; }
-
-    /* ══ FOOTER ══ */
-    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 40px 24px; }
-
-    .footer-inner { max-width: 1080px; margin: 0 auto; }
-
-    .footer-top {
-      display: flex; justify-content: space-between; flex-wrap: wrap;
-      gap: 24px; padding-bottom: 26px; margin-bottom: 22px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--border);
     }
 
-    .footer-brand { font-weight: 800; font-size: .93rem; margin-bottom: 5px; }
-    .footer-meta  { font-size: .78rem; color: var(--muted); line-height: 1.7; }
+    .priv h3 {
+      font-size: .86rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 20px 0 6px;
+    }
 
-    .footer-nav { display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start; }
-    .footer-nav a { font-size: .8rem; color: var(--muted); transition: color .2s; }
-    .footer-nav a:hover { color: var(--text); }
+    .priv a {
+      color: var(--green);
+    }
+
+    .priv a:hover {
+      text-decoration: underline;
+    }
+
+    /* ══ FOOTER ══ */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-bottom: 26px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      font-size: .93rem;
+      margin-bottom: 5px;
+    }
+
+    .footer-meta {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .footer-nav a {
+      font-size: .8rem;
+      color: var(--muted);
+      transition: color .2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--text);
+    }
 
     .footer-bottom {
-      display: flex; justify-content: space-between; flex-wrap: wrap;
-      gap: 10px; font-size: .76rem; color: var(--muted2); align-items: center;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: .76rem;
+      color: var(--muted2);
+      align-items: center;
     }
 
     .meta-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--bg2); border: 1px solid var(--border);
-      border-radius: 100px; padding: 4px 12px;
-      font-size: .69rem; font-weight: 600; color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 4px 12px;
+      font-size: .69rem;
+      font-weight: 600;
+      color: var(--green);
     }
 
-    .meta-badge::before { content: ''; width: 5px; height: 5px; background: var(--green); border-radius: 50%; }
+    .meta-badge::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+    }
 
-    @media (max-width: 500px) { nav { display: none; } }
+    @media (max-width: 500px) {
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<!-- ══ HEADER ══ -->
-<header>
-  <div class="header-wrap">
-    <div class="logo-mark">
-      <div class="logo-avatar">AM</div>
-      <div class="logo-text">
-        Antonio Marcos
-        <span>Arquiteto de Soluções e Desenvolvedor</span>
+  <!-- ══ HEADER ══ -->
+  <header>
+    <div class="header-wrap">
+      <div class="logo-mark">
+        <div class="logo-avatar">AM</div>
+        <div class="logo-text">
+          Antonio Marcos
+          <span>Arquiteto de Soluções e Desenvolvedor</span>
+        </div>
       </div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
-    <nav>
-      <a href="#servicos">Serviços</a>
-      <a href="#processo">Como funciona</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<!-- ══ HERO ══ -->
-<section class="hero" id="inicio">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-bg-glow"></div>
-  <div class="hero-inner wrap">
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+    <div class="hero-inner wrap">
 
-    <div class="hero-text">
-      <div class="hero-kicker">
-        <div class="kicker-dot"></div>
-        WhatsApp Business API · Integração Oficial Meta
+      <div class="hero-text">
+        <div class="hero-kicker">
+          <div class="kicker-dot"></div>
+          WhatsApp Business API · Integração Oficial Meta
+        </div>
+        <h1>
+          Transformo o WhatsApp<br />
+          da sua empresa em um<br />
+          <span class="hl">canal de vendas real</span>
+        </h1>
+        <p class="hero-lead">
+          Seu canal de atendimento e vendas no WhatsApp — configurado, operando e monitorado
+          por mim, todo mês. Você foca no seu negócio. A tecnologia fica comigo.
+        </p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn-main">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            Quero uma conversa inicial
+          </a>
+          <a href="#servicos" class="btn-ghost">Como funciona</a>
+        </div>
       </div>
-      <h1>
-        Transformo o WhatsApp<br/>
-        da sua empresa em um<br/>
-        <span class="hl">canal de vendas real</span>
-      </h1>
-      <p class="hero-lead">
-        Seu canal de atendimento e vendas no WhatsApp — configurado, operando e monitorado
-        por mim, todo mês. Você foca no seu negócio. A tecnologia fica comigo.
-      </p>
-      <div class="hero-actions">
-        <a href="#contato" class="btn-main">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Quero uma conversa inicial
-        </a>
-        <a href="#servicos" class="btn-ghost">Como funciona</a>
-      </div>
-    </div>
 
-    <div class="hero-photo-col">
-      <div class="hero-photo">
-        <!-- SUBSTITUA ESTE BLOCO PELA SUA FOTO:
+      <div class="hero-photo-col">
+        <div class="hero-photo">
+          <!-- SUBSTITUA ESTE BLOCO PELA SUA FOTO:
              <img src="foto.jpg" alt="Antonio Marcos" style="width:100%;height:100%;object-fit:cover;border-radius:16px;" />
         -->
-        <div class="photo-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="photo-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div class="photo-label">Substitua pelo seu<br />arquivo foto.jpg</div>
+          <div class="hero-photo-badge">Bauru · SP · Brasil</div>
         </div>
-        <div class="photo-label">Substitua pelo seu<br/>arquivo foto.jpg</div>
-        <div class="hero-photo-badge">Bauru · SP · Brasil</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══ VALUE STRIP ══ -->
-<div class="edu-strip">
-  <div class="edu-inner">
-    <div>
-      <div class="edu-label">O modelo</div>
-      <div class="edu-title">Uma operação completa rodando — sem você precisar pensar nisso</div>
-    </div>
-    <div class="edu-cards">
-      <div class="edu-card">
-        <div class="edu-num">01</div>
-        <div>
-          <h4>Você contrata o canal funcionando, não um projeto</h4>
-          <p>Não é uma entrega que termina. É um serviço mensal: infraestrutura ativa, fluxos rodando, monitoramento contínuo e atualizações sempre que o WhatsApp ou o seu negócio mudarem.</p>
-        </div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-num">02</div>
-        <div>
-          <h4>Se algo sair do ar, é problema meu — não seu</h4>
-          <p>Quando o WhatsApp atualiza as regras, quando um fluxo precisa de ajuste, quando a API tem instabilidade — você não precisa saber. Isso fica comigo. Você só vê o canal funcionando.</p>
-        </div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-num">03</div>
-        <div>
-          <h4>Escala no seu ritmo, sem contratar TI</h4>
-          <p>Quer adicionar um novo fluxo, integrar um sistema diferente ou expandir o atendimento? Já está incluído na relação. Você cresce sem precisar contratar, treinar ou gerenciar equipe técnica.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ SERVICES ══ -->
-<section id="servicos">
-  <div class="wrap">
-    <div class="s-head">
-      <div class="s-label">O que está incluído</div>
-      <h2>Tudo que mantém sua operação no ar, todo mês</h2>
-      <p>Cada item abaixo não é um projeto separado — faz parte da operação contínua que entrego e mantenho por você.</p>
-    </div>
-    <div class="svc-grid">
-
-      <div class="svc">
-        <div class="svc-n">01 —</div>
-        <div class="svc-ico">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <h3>Canal Oficial Ativo e Monitorado</h3>
-        <p>Sua conta WABA aprovada pelo Meta, número verificado e perfil comercial operando. Monitoro a saúde do canal continuamente — se algo mudar nas políticas do WhatsApp, já estará adaptado antes de virar problema.</p>
-      </div>
-
-      <div class="svc">
-        <div class="svc-n">02 —</div>
-        <div class="svc-ico">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <h3>Atendimento Automatizado 24h</h3>
-        <p>Fluxos conversacionais rodando enquanto você não está. Capturam leads, respondem dúvidas, qualificam interesse e encaminham para a sua equipe — com contexto completo da conversa, sem o cliente repetir nada.</p>
-      </div>
-
-      <div class="svc">
-        <div class="svc-n">03 —</div>
-        <div class="svc-ico">
-          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3>Integração com Seus Sistemas</h3>
-        <p>WhatsApp conectado ao CRM, sistema de agendamento, e-commerce ou planilha da sua operação. Cada conversa vira dado estruturado automaticamente — sem retrabalho manual para a sua equipe.</p>
-      </div>
-
-      <div class="svc">
-        <div class="svc-n">04 —</div>
-        <div class="svc-ico">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3>Campanhas e Disparos Gerenciados</h3>
-        <p>Envio de mensagens em massa via templates oficiais — promoções, cobranças, confirmações, reativações. Cuido da criação, aprovação junto ao Meta e disparo. Você só aprova o conteúdo.</p>
-      </div>
-
-      <div class="svc">
-        <div class="svc-n">05 —</div>
-        <div class="svc-ico">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Equipe Atendendo no Mesmo Número</h3>
-        <p>Múltiplos atendentes, filas, departamentos e histórico unificado — tudo gerenciado na infraestrutura que mantenho. Você adiciona ou remove pessoas da operação sem se preocupar com configuração técnica.</p>
-      </div>
-
-      <div class="svc">
-        <div class="svc-n">06 —</div>
-        <div class="svc-ico">
-          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h3>Evolução Contínua da Operação</h3>
-        <p>Seu negócio muda — os fluxos acompanham. Novos produtos, sazonalidades, mudanças no processo de vendas: ajusto a operação sem custo adicional de projeto. É parte do serviço, não um extra.</p>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ PROCESS ══ -->
-<section id="processo">
-  <div class="wrap">
-    <div class="s-head">
-      <div class="s-label">Como começar</div>
-      <h2>Da conversa inicial à operação rodando</h2>
-      <p>Quatro etapas para você ter um canal profissional no ar — e depois disso, cuido de tudo.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step-item">
-        <div class="step-n">ETAPA 01</div>
-        <h3>Diagnóstico</h3>
-        <p>Entendo o seu negócio, o volume de atendimento e o que faz sentido automatizar. Saímos com um escopo claro — sem custo, sem compromisso.</p>
+  <!-- ══ VALUE STRIP ══ -->
+  <div class="edu-strip">
+    <div class="edu-inner">
+      <div>
+        <div class="edu-label">O modelo</div>
+        <div class="edu-title">Uma operação completa rodando — sem você precisar pensar nisso</div>
       </div>
-      <div class="step-item">
-        <div class="step-n">ETAPA 02</div>
-        <h3>Implantação</h3>
-        <p>Ativação WABA, desenvolvimento dos fluxos e integrações. Você aprova cada etapa antes de avançar. Prazo definido antes de começar.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-n">ETAPA 03</div>
-        <h3>Operação</h3>
-        <p>Canal no ar, equipe treinada, tudo funcionando. A partir daqui começa o serviço contínuo — monitoramento, manutenção e ajustes incluídos na mensalidade.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-n">SEMPRE</div>
-        <h3>Evolução</h3>
-        <p>Seu negócio muda. Novos fluxos, integrações ou ajustes de operação fazem parte da relação. Você não paga por projeto toda vez que precisar evoluir.</p>
+      <div class="edu-cards">
+        <div class="edu-card">
+          <div class="edu-num">01</div>
+          <div>
+            <h4>Você contrata o canal funcionando, não um projeto</h4>
+            <p>Não é uma entrega que termina. É um serviço mensal: infraestrutura ativa, fluxos rodando, monitoramento
+              contínuo e atualizações sempre que o WhatsApp ou o seu negócio mudarem.</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-num">02</div>
+          <div>
+            <h4>Se algo sair do ar, é problema meu — não seu</h4>
+            <p>Quando o WhatsApp atualiza as regras, quando um fluxo precisa de ajuste, quando a API tem instabilidade —
+              você não precisa saber. Isso fica comigo. Você só vê o canal funcionando.</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-num">03</div>
+          <div>
+            <h4>Escala no seu ritmo, sem contratar TI</h4>
+            <p>Quer adicionar um novo fluxo, integrar um sistema diferente ou expandir o atendimento? Já está incluído
+              na relação. Você cresce sem precisar contratar, treinar ou gerenciar equipe técnica.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ══ ABOUT ══ -->
-<section id="sobre">
-  <div class="wrap">
-    <div class="about-grid">
+  <!-- ══ SERVICES ══ -->
+  <section id="servicos">
+    <div class="wrap">
+      <div class="s-head">
+        <div class="s-label">O que está incluído</div>
+        <h2>Tudo que mantém sua operação no ar, todo mês</h2>
+        <p>Cada item abaixo não é um projeto separado — faz parte da operação contínua que entrego e mantenho por você.
+        </p>
+      </div>
+      <div class="svc-grid">
 
-      <div class="about-photo">
-        <div class="about-photo-inner">
-          <!-- SUBSTITUA PELO SEU ARQUIVO:
+        <div class="svc">
+          <div class="svc-n">01 —</div>
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <h3>Canal Oficial Ativo e Monitorado</h3>
+          <p>Sua conta WABA aprovada pelo Meta, número verificado e perfil comercial operando. Monitoro a saúde do canal
+            continuamente — se algo mudar nas políticas do WhatsApp, já estará adaptado antes de virar problema.</p>
+        </div>
+
+        <div class="svc">
+          <div class="svc-n">02 —</div>
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <h3>Atendimento Automatizado 24h</h3>
+          <p>Fluxos conversacionais rodando enquanto você não está. Capturam leads, respondem dúvidas, qualificam
+            interesse e encaminham para a sua equipe — com contexto completo da conversa, sem o cliente repetir nada.
+          </p>
+        </div>
+
+        <div class="svc">
+          <div class="svc-n">03 —</div>
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3>Integração com Seus Sistemas</h3>
+          <p>WhatsApp conectado ao CRM, sistema de agendamento, e-commerce ou planilha da sua operação. Cada conversa
+            vira dado estruturado automaticamente — sem retrabalho manual para a sua equipe.</p>
+        </div>
+
+        <div class="svc">
+          <div class="svc-n">04 —</div>
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <h3>Campanhas e Disparos Gerenciados</h3>
+          <p>Envio de mensagens em massa via templates oficiais — promoções, cobranças, confirmações, reativações. Cuido
+            da criação, aprovação junto ao Meta e disparo. Você só aprova o conteúdo.</p>
+        </div>
+
+        <div class="svc">
+          <div class="svc-n">05 —</div>
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3>Equipe Atendendo no Mesmo Número</h3>
+          <p>Múltiplos atendentes, filas, departamentos e histórico unificado — tudo gerenciado na infraestrutura que
+            mantenho. Você adiciona ou remove pessoas da operação sem se preocupar com configuração técnica.</p>
+        </div>
+
+        <div class="svc">
+          <div class="svc-n">06 —</div>
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+          </div>
+          <h3>Evolução Contínua da Operação</h3>
+          <p>Seu negócio muda — os fluxos acompanham. Novos produtos, sazonalidades, mudanças no processo de vendas:
+            ajusto a operação sem custo adicional de projeto. É parte do serviço, não um extra.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROCESS ══ -->
+  <section id="processo">
+    <div class="wrap">
+      <div class="s-head">
+        <div class="s-label">Como começar</div>
+        <h2>Da conversa inicial à operação rodando</h2>
+        <p>Quatro etapas para você ter um canal profissional no ar — e depois disso, cuido de tudo.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-n">ETAPA 01</div>
+          <h3>Diagnóstico</h3>
+          <p>Entendo o seu negócio, o volume de atendimento e o que faz sentido automatizar. Saímos com um escopo claro
+            — sem custo, sem compromisso.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-n">ETAPA 02</div>
+          <h3>Implantação</h3>
+          <p>Ativação WABA, desenvolvimento dos fluxos e integrações. Você aprova cada etapa antes de avançar. Prazo
+            definido antes de começar.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-n">ETAPA 03</div>
+          <h3>Operação</h3>
+          <p>Canal no ar, equipe treinada, tudo funcionando. A partir daqui começa o serviço contínuo — monitoramento,
+            manutenção e ajustes incluídos na mensalidade.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-n">SEMPRE</div>
+          <h3>Evolução</h3>
+          <p>Seu negócio muda. Novos fluxos, integrações ou ajustes de operação fazem parte da relação. Você não paga
+            por projeto toda vez que precisar evoluir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="sobre">
+    <div class="wrap">
+      <div class="about-grid">
+
+        <div class="about-photo">
+          <div class="about-photo-inner">
+            <!-- SUBSTITUA PELO SEU ARQUIVO:
                <img src="foto.jpg" alt="Antonio Marcos" style="width:100%;height:100%;object-fit:cover;" />
           -->
-          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <div class="about-photo-info">
+            <div class="about-photo-name">Antonio Marcos</div>
+            <div class="about-photo-role">Arquiteto de Soluções e Desenvolvedor</div>
+            <div class="about-photo-city">Bauru, São Paulo · Brasil</div>
+          </div>
         </div>
-        <div class="about-photo-info">
-          <div class="about-photo-name">Antonio Marcos</div>
-          <div class="about-photo-role">Arquiteto de Soluções e Desenvolvedor</div>
-          <div class="about-photo-city">Bauru, São Paulo · Brasil</div>
-        </div>
-      </div>
 
-      <div class="about-content">
-        <div class="s-label" style="margin-bottom:10px;">Sobre</div>
-        <h2>Quem projeta e entrega as soluções</h2>
-        <p>
-          Sou desenvolvedor com experiência prática construindo integrações com WhatsApp Business API —
-          trabalhei em projetos reais de automação e chatbot dentro de empresas de tecnologia antes de
-          montar minha própria operação focada nisso.
-        </p>
-        <p>
-          O modelo que ofereço é diferente de contratar um dev para fazer um projeto: você está
-          contratando uma operação gerenciada. Cuido da infraestrutura, dos fluxos, das integrações
-          e de tudo que mantém o canal funcionando — como uma equipe de TI dedicada, sem os custos
-          de CLT e gestão.
-        </p>
-        <p>
-          Você não precisa entender de API, de servidor ou de automação. Precisa saber o que quer
-          que aconteça quando o cliente manda mensagem. O resto fica comigo.
-        </p>
-        <div class="skills-wrap">
-          <div class="skill-tag">WhatsApp Business API</div>
-          <div class="skill-tag">Meta Business Manager</div>
-          <div class="skill-tag">Chatbots e Automação</div>
-          <div class="skill-tag">Node.js / Python</div>
-          <div class="skill-tag">REST APIs e Webhooks</div>
-          <div class="skill-tag">Integração com CRM</div>
-          <div class="skill-tag">Templates WABA</div>
-          <div class="skill-tag">LGPD e Conformidade</div>
+        <div class="about-content">
+          <div class="s-label" style="margin-bottom:10px;">Sobre</div>
+          <h2>Quem projeta e entrega as soluções</h2>
+          <p>
+            Sou desenvolvedor com experiência prática construindo integrações com WhatsApp Business API —
+            trabalhei em projetos reais de automação e chatbot dentro de empresas de tecnologia antes de
+            montar minha própria operação focada nisso.
+          </p>
+          <p>
+            O modelo que ofereço é diferente de contratar um dev para fazer um projeto: você está
+            contratando uma operação gerenciada. Cuido da infraestrutura, dos fluxos, das integrações
+            e de tudo que mantém o canal funcionando — como uma equipe de TI dedicada, sem os custos
+            de CLT e gestão.
+          </p>
+          <p>
+            Você não precisa entender de API, de servidor ou de automação. Precisa saber o que quer
+            que aconteça quando o cliente manda mensagem. O resto fica comigo.
+          </p>
+          <div class="skills-wrap">
+            <div class="skill-tag">WhatsApp Business API</div>
+            <div class="skill-tag">Meta Business Manager</div>
+            <div class="skill-tag">Chatbots e Automação</div>
+            <div class="skill-tag">Node.js / Python</div>
+            <div class="skill-tag">REST APIs e Webhooks</div>
+            <div class="skill-tag">Integração com CRM</div>
+            <div class="skill-tag">Templates WABA</div>
+            <div class="skill-tag">LGPD e Conformidade</div>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ CONTACT ══ -->
-<section id="contato">
-  <div class="wrap">
-    <div class="contact-layout">
+  <!-- ══ CONTACT ══ -->
+  <section id="contato">
+    <div class="wrap">
+      <div class="contact-layout">
 
-      <div class="contact-left">
-        <div class="s-label" style="margin-bottom:10px;">Contato</div>
-        <h2>Vamos conversar sobre o seu projeto?</h2>
-        <p>
-          Me conta o que a sua empresa precisa resolver — atendimento, vendas, automação ou integração.
-          A primeira conversa é gratuita e já saímos dela com um diagnóstico claro do que faz sentido
-          para o seu caso.
+        <div class="contact-left">
+          <div class="s-label" style="margin-bottom:10px;">Contato</div>
+          <h2>Vamos conversar sobre o seu projeto?</h2>
+          <p>
+            Me conta o que a sua empresa precisa resolver — atendimento, vendas, automação ou integração.
+            A primeira conversa é gratuita e já saímos dela com um diagnóstico claro do que faz sentido
+            para o seu caso.
+          </p>
+          <div class="contact-promise">
+            <div class="promise-item">
+              <span class="promise-check">✓</span>
+              <span>Primeira conversa gratuita — diagnóstico real, sem pitch de venda</span>
+            </div>
+            <div class="promise-item">
+              <span class="promise-check">✓</span>
+              <span>Proposta com escopo e investimento mensal antes de qualquer início</span>
+            </div>
+            <div class="promise-item">
+              <span class="promise-check">✓</span>
+              <span>Infraestrutura e operação gerenciadas — você não precisa entender de tecnologia</span>
+            </div>
+            <div class="promise-item">
+              <span class="promise-check">✓</span>
+              <span>Se algo sair do ar, é responsabilidade minha resolver — não sua</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <a class="ch"
+            href="https://wa.me/5514988013007?text=Ol%C3%A1%20Antonio%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20automa%C3%A7%C3%A3o%20via%20WhatsApp."
+            target="_blank" rel="noopener">
+            <div class="ch-ico">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </div>
+            <div class="ch-info">
+              <div class="ch-lbl">WhatsApp · resposta mais rápida</div>
+              <div class="ch-val">+55 14 98801-3007</div>
+            </div>
+            <div class="ch-arr">→</div>
+          </a>
+          <a class="ch"
+            href="/cdn-cgi/l/email-protection#d1b0bfa5bebfb8bebca0a4b0b5a3bea2b7b8bdb9be91b6bcb0b8bdffb2bebc">
+            <div class="ch-ico">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div class="ch-info">
+              <div class="ch-lbl">E-mail</div>
+              <div class="ch-val"><span class="__cf_email__"
+                  data-cfemail="5637382239383f393b27233732243925303f3a3e3916313b373f3a7835393b">antoniomquadrosfilho@gmail.com</span>
+              </div>
+            </div>
+            <div class="ch-arr">→</div>
+          </a>
+          <div class="contact-note">
+            Atendo de segunda a sexta, das 9h às 18h (horário de Brasília).<br />
+            Retorno mensagens fora desse horário no próximo dia útil.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRIVACY ══ -->
+  <section id="privacidade">
+    <div class="wrap">
+      <div class="priv">
+        <h2>Política de Privacidade — Trajeto Web</h2>
+        <p><em>Última atualização: 02 de março de 2025.</em></p>
+
+        <h3>1. Responsável pelo Tratamento</h3>
+        <p><strong>Trajeto Web</strong> — RUA HENRIQUE MARCHIONI, nº 262, JARDIM ROSA BRANCA, Bauru, SP, CEP 17067-100,
+          Brasil. Contato: <a href="mailto:antoniomquadrosfilho@gmail.com"><span class="__cf_email__"
+              data-cfemail="4c2d223823222523213d392d283e233f2a252024230c2b212d2520622f2321">antoniomquadrosfilho@gmail.com</span></a>
+          · +55 14 98801-3007.</p>
+
+        <h3>2. Dados Coletados</h3>
+        <p>Coletamos exclusivamente os dados necessários para a prestação dos serviços: nome, e-mail, telefone/WhatsApp,
+          informações da empresa contratante e dados técnicos de integração. Não coletamos dados de categorias sensíveis
+          (Art. 5º, II, LGPD — Lei nº 13.709/2018).</p>
+
+        <h3>3. Finalidade</h3>
+        <p>Os dados são utilizados para: prestação dos serviços contratados; comunicação sobre projetos; emissão de
+          documentos fiscais; conformidade com políticas do Meta/WhatsApp Business API; e cumprimento de obrigações
+          legais.</p>
+
+        <h3>4. Base Legal</h3>
+        <p>Execução de contrato (Art. 7º, V – LGPD), cumprimento de obrigação legal (Art. 7º, II) e legítimo interesse
+          (Art. 7º, IX).</p>
+
+        <h3>5. Compartilhamento</h3>
+        <p>Não vendemos ou cedemos dados a terceiros para fins comerciais. Compartilhamos informações estritamente
+          necessárias com a Meta Platforms Inc. apenas para execução dos serviços contratados.</p>
+
+        <h3>6. Retenção</h3>
+        <p>Os dados são mantidos pelo período necessário à prestação do serviço e cumprimento de obrigações legais, não
+          excedendo 5 anos após o encerramento do contrato.</p>
+
+        <h3>7. Direitos do Titular</h3>
+        <p>Nos termos da LGPD, você pode confirmar a existência de tratamento, acessar, corrigir, solicitar eliminação
+          dos dados ou revogar o consentimento. Solicitações: <a href="mailto:antoniomquadrosfilho@gmail.com"><span
+              class="__cf_email__"
+              data-cfemail="ff9e918b90919690928e8a9e9b8d908c9996939790bf98929e9693d19c9092">antoniomquadrosfilho@gmail.com</span></a>.
         </p>
-        <div class="contact-promise">
-          <div class="promise-item">
-            <span class="promise-check">✓</span>
-            <span>Primeira conversa gratuita — diagnóstico real, sem pitch de venda</span>
-          </div>
-          <div class="promise-item">
-            <span class="promise-check">✓</span>
-            <span>Proposta com escopo e investimento mensal antes de qualquer início</span>
-          </div>
-          <div class="promise-item">
-            <span class="promise-check">✓</span>
-            <span>Infraestrutura e operação gerenciadas — você não precisa entender de tecnologia</span>
-          </div>
-          <div class="promise-item">
-            <span class="promise-check">✓</span>
-            <span>Se algo sair do ar, é responsabilidade minha resolver — não sua</span>
+
+        <h3>8. Segurança</h3>
+        <p>Adotamos medidas técnicas e organizacionais adequadas para proteger os dados contra acesso não autorizado,
+          perda ou divulgação indevida.</p>
+
+        <h3>9. WhatsApp Business API</h3>
+        <p>Ao contratar serviços de integração WABA, o titular declara ciência de que as comunicações via WhatsApp são
+          processadas pela Meta Platforms Inc., sujeita às suas próprias políticas de privacidade. Toda implementação
+          observa as Políticas de Uso Aceitável do WhatsApp Business.</p>
+
+        <h3>10. Autoridade Nacional</h3>
+        <p>Reclamações não resolvidas diretamente podem ser encaminhadas à ANPD em <a href="https://www.gov.br/anpd"
+            target="_blank" rel="noopener">www.gov.br/anpd</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Trajeto Web</div>
+          <div class="footer-meta">
+            RUA HENRIQUE MARCHIONI, nº 262, JARDIM ROSA BRANCA, Bauru, SP, CEP 17067-100 - Brasil<br />
+            <a href="mailto:antoniomquadrosfilho@gmail.com" class="__cf_email__"
+              data-cfemail="04656a706b6a6d6b6975716560766b77626d686c6b446369656d682a676b69">antoniomquadrosfilho@gmail.com</a>
           </div>
         </div>
       </div>
-
-      <div class="contact-right">
-        <a class="ch" href="https://wa.me/5514988013007?text=Ol%C3%A1%20Antonio%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20automa%C3%A7%C3%A3o%20via%20WhatsApp." target="_blank" rel="noopener">
-          <div class="ch-ico">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="ch-info">
-            <div class="ch-lbl">WhatsApp · resposta mais rápida</div>
-            <div class="ch-val">+55 14 98801-3007</div>
-          </div>
-          <div class="ch-arr">→</div>
-        </a>
-        <a class="ch" href="/cdn-cgi/l/email-protection#d1b0bfa5bebfb8bebca0a4b0b5a3bea2b7b8bdb9be91b6bcb0b8bdffb2bebc">
-          <div class="ch-ico">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="ch-info">
-            <div class="ch-lbl">E-mail</div>
-            <div class="ch-val"><span class="__cf_email__" data-cfemail="5637382239383f393b27233732243925303f3a3e3916313b373f3a7835393b">[email&#160;protected]</span></div>
-          </div>
-          <div class="ch-arr">→</div>
-        </a>
-        <div class="contact-note">
-          Atendo de segunda a sexta, das 9h às 18h (horário de Brasília).<br/>
-          Retorno mensagens fora desse horário no próximo dia útil.
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-
-<!-- ══ PRIVACY ══ -->
-<section id="privacidade">
-  <div class="wrap">
-    <div class="priv">
-      <h2>Política de Privacidade — Antonio Marcos Arquiteto de Soluções</h2>
-      <p><em>Última atualização: 01 de março de 2025.</em></p>
-
-      <h3>1. Responsável pelo Tratamento</h3>
-      <p><strong>Antonio Marcos Arquiteto de Soluções</strong> — Alameda Licurgo, 572, Bauru, SP, CEP 17067-490, Brasil. Contato: <a href="/cdn-cgi/l/email-protection#3a5b544e55545355574b4f5b5e4855495c535652557a5d575b535614595557"><span class="__cf_email__" data-cfemail="4c2d223823222523213d392d283e233f2a252024230c2b212d2520622f2321">[email&#160;protected]</span></a> · +55 14 98801-3007.</p>
-
-      <h3>2. Dados Coletados</h3>
-      <p>Coletamos exclusivamente os dados necessários para a prestação dos serviços: nome, e-mail, telefone/WhatsApp, informações da empresa contratante e dados técnicos de integração. Não coletamos dados de categorias sensíveis (Art. 5º, II, LGPD — Lei nº 13.709/2018).</p>
-
-      <h3>3. Finalidade</h3>
-      <p>Os dados são utilizados para: prestação dos serviços contratados; comunicação sobre projetos; emissão de documentos fiscais; conformidade com políticas do Meta/WhatsApp Business API; e cumprimento de obrigações legais.</p>
-
-      <h3>4. Base Legal</h3>
-      <p>Execução de contrato (Art. 7º, V – LGPD), cumprimento de obrigação legal (Art. 7º, II) e legítimo interesse (Art. 7º, IX).</p>
-
-      <h3>5. Compartilhamento</h3>
-      <p>Não vendemos ou cedemos dados a terceiros para fins comerciais. Compartilhamos informações estritamente necessárias com a Meta Platforms Inc. apenas para execução dos serviços contratados.</p>
-
-      <h3>6. Retenção</h3>
-      <p>Os dados são mantidos pelo período necessário à prestação do serviço e cumprimento de obrigações legais, não excedendo 5 anos após o encerramento do contrato.</p>
-
-      <h3>7. Direitos do Titular</h3>
-      <p>Nos termos da LGPD, você pode confirmar a existência de tratamento, acessar, corrigir, solicitar eliminação dos dados ou revogar o consentimento. Solicitações: <a href="/cdn-cgi/l/email-protection#c6a7a8b2a9a8afa9abb7b3a7a2b4a9b5a0afaaaea986a1aba7afaae8a5a9ab"><span class="__cf_email__" data-cfemail="ff9e918b90919690928e8a9e9b8d908c9996939790bf98929e9693d19c9092">[email&#160;protected]</span></a>.</p>
-
-      <h3>8. Segurança</h3>
-      <p>Adotamos medidas técnicas e organizacionais adequadas para proteger os dados contra acesso não autorizado, perda ou divulgação indevida.</p>
-
-      <h3>9. WhatsApp Business API</h3>
-      <p>Ao contratar serviços de integração WABA, o titular declara ciência de que as comunicações via WhatsApp são processadas pela Meta Platforms Inc., sujeita às suas próprias políticas de privacidade. Toda implementação observa as Políticas de Uso Aceitável do WhatsApp Business.</p>
-
-      <h3>10. Autoridade Nacional</h3>
-      <p>Reclamações não resolvidas diretamente podem ser encaminhadas à ANPD em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">www.gov.br/anpd</a>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand">Antonio Marcos Arquiteto de Soluções</div>
-        <div class="footer-meta">
-          Alameda Licurgo, 572 — Bauru, SP — CEP 17067-490 — Brasil<br/>
-          <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="04656a706b6a6d6b6975716560766b77626d686c6b446369656d682a676b69">[email&#160;protec
